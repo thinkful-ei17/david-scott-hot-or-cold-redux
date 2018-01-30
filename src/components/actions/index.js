@@ -6,7 +6,8 @@ export const makeGuess = guess => ({
 
 export const START_A_NEW_GAME = 'START_A_NEW_GAME';
 export const startANewGame = () => ({
-    type: START_A_NEW_GAME
+    type: START_A_NEW_GAME,
+    correctAnswer: Math.floor(Math.random() * 100) + 1
 });
 
 export const GENERATE_AURAL_UPDATE = 'GENERATE_AURAL_UPDATE';
