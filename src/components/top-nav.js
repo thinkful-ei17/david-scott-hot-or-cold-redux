@@ -21,7 +21,11 @@ export function TopNav(props) {
             href="#feedback"
             className="new"
             aria-label="Start a new game"
-            onClick={() => props.dispatch(startANewGame())}
+            onClick={() => {
+              console.log('start game ran');
+              props.dispatch(startANewGame());
+            }
+          }
           >
             + New Game
           </a>

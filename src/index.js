@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './components/store';
-import {makeGuess, generateAuralUpdate, startANewGame} from './components/actions';
-
 import './reset.css';
 import './index.css';
 

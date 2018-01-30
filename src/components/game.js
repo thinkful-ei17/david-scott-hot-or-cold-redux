@@ -5,29 +5,16 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-import { makeGuess, startANewGame, generateAuralUpdate } from './actions';
 
 export class Game extends React.Component {
 
   render() {
-    const { feedback, guesses, auralStatus } = this.props;
-    const guessCount = guesses.length;
-
     return (
       <div>
-        <Header
-          onRestartGame={() => this.props.dispatch(startANewGame())}
-          onGenerateAuralUpdate={() => this.generateAuralUpdate()}
-        />
+        <Header/>
         <main role="main">
-          <GuessSection
-            feedback={feedback}
-            guessCount={guessCount}
-            onMakeGuess={guess => this.makeGuess(guess)}
-          />
-          <StatusSection guesses={guesses} 
-            auralStatus={auralStatus}
-          />
+          <GuessSection />
+          <StatusSection />
           <InfoSection />
         </main>
       </div>
